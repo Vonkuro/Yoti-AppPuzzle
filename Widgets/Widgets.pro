@@ -8,7 +8,7 @@ QT       += gui widgets multimedia multimediawidgets sql
 
 TARGET = Widgets
 TEMPLATE = lib
-
+#CONFIG = staticlib
 
 
 DEFINES += WIDGETS_LIBRARY

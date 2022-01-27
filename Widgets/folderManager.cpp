@@ -41,6 +41,12 @@ void folderManager::tarOldImageFolder()
 {
     // Map the Images directory
     QString directoryPath = "../Images";
+
+    QDir allImages(directoryPath);
+    if(! allImages.exists()){
+        return;
+    }
+
     QDir images(directoryPath);
     QStringList puzzleList = images.entryList();
 
