@@ -22,6 +22,7 @@ private:
     void deleteOldImageFolder(QStringList puzzleList,int lastPuzzle);
 // Attributs
     int limitBeforeArchive;
+    QString homePath;
 // Database
     EnvLocal dataWrapper;
 };

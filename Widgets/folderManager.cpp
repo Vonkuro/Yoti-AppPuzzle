@@ -4,7 +4,8 @@
 // Prepare the limit of new puzzle directory before archiving them
 folderManager::folderManager()
 {
-    newDir("../Archive");
+    homePath = QDir::homePath() + "/Yoti-AppPuzzle";
+    newDir( homePath + "/Archive");
     limitBeforeArchive = 200;
 }
 
@@ -40,7 +41,8 @@ int folderManager::findPuzzleNumber(QStringList puzzleList, bool first = true) /
 void folderManager::tarOldImageFolder()
 {
     // Map the Images directory
-    QString directoryPath = "../Images";
+
+    QString directoryPath = homePath + "/Images";
 
     QDir allImages(directoryPath);
     if(! allImages.exists()){
@@ -66,7 +68,7 @@ void folderManager::tarOldImageFolder()
         QDateTime date = QDateTime::currentDateTime();
         QString dateString = date.toString("dd_MM_yyyy-hh_mm_ss");
 
-        QString commandQString = "tar -Jcvf ../Archive/Images-" + dateString +".tar.xz" + exclusion + " ../Images";
+        QString commandQString = "tar -Jcvf " + homePath + "/Archive/Images-" + dateString +".tar.xz" + exclusion + " ../Images";
 
         // Convert the command to const char* in order to transmit it to bash terminal
         std::string commandString = commandQString.toStdString();
@@ -143,7 +145,7 @@ void folderManager::deleteOldImageFolder(QStringList puzzleList,int lastPuzzle)
         int number = puzzle.right(numberSize).toInt();
         if (number < numberLimit && puzzle != "." && puzzle != "..")
         {
-            QString puzzlePath = "../Images/" + puzzle + "/";
+            QString puzzlePath = homePath + "/Images/" + puzzle + "/";
             QDir puzzleFolder(puzzlePath);
 
             puzzleFolder.removeRecursively();
