@@ -80,6 +80,9 @@ void ScannerWidget::scanPuzzle()
     QString commandQString = "scanimage -d " + scannerName + " --mode Color --resolution 300 --format=jpeg > " + imagePathQString;
     std::string commandString = commandQString.toStdString();
     const char* command = commandString.c_str();
+
+    logMessage(commandQString);
+
     system(command);
 
     delay(3000);

@@ -35,4 +35,13 @@ std::string execute(const std::string& command) {
     return ret;
 }
 
+void logMessage(QString message) {
 
+    QString home = QDir::homePath();
+    QString filename = home + "/Yoti-AppPuzzle/log.txt";
+    QFile file(filename);
+    if (file.open(QIODevice::ReadWrite)) {
+        QTextStream stream(&file);
+        stream << message << endl;
+    }
+}
