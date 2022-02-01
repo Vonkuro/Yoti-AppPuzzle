@@ -81,7 +81,6 @@ void ScannerWidget::scanPuzzle()
     std::string commandString = commandQString.toStdString();
     const char* command = commandString.c_str();
 
-    logMessage(commandQString);
 
     system(command);
 

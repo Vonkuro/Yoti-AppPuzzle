@@ -54,7 +54,6 @@ Devices ChoiceScannerWidget::findScanners()
 {
     QString scanimageOutput = QString::fromStdString(execute("scanimage -L"));
     scanimageOutput = scanimageOutput.simplified();
-    logMessage(scanimageOutput);
 
     //QString testMessage = "device `hpaio:/usb/Photosmart_Plus_B210_series?serial=CN16N321K605J9' is a Hewlett-Packard Photosmart_Plus_B210_series all-in-one device `hpaio:ect hp:/usb/Photosmart_Plus_B210_series?serial=CN16N321K605J9 \"HP Photosmart Plus B210 series\" \"HP Photosmart Plus B210 series USB CN16N321K605J9 HPLIP\" \"MFG:HP' is a Hewlett-Packard Photosmart_Plus_B210_series all-in-one";
 

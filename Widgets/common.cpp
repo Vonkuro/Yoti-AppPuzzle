@@ -39,9 +39,14 @@ void logMessage(QString message) {
 
     QString home = QDir::homePath();
     QString filename = home + "/Yoti-AppPuzzle/log.txt";
+
+    QDateTime date = QDateTime::currentDateTime();
+    QString formattedTime = date.toString("dd/MM/yyyy-hh:mm:ss");
+    formattedTime += "  ";
+
     QFile file(filename);
-    if (file.open(QIODevice::ReadWrite)) {
+    if (file.open(QIODevice::ReadWrite | QIODevice::Append)) {
         QTextStream stream(&file);
-        stream << message << endl;
+        stream << formattedTime << message << endl;
     }
 }

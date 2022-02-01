@@ -2,11 +2,11 @@
 
 WaittingWidget::WaittingWidget(QWidget *parent) : QWidget(parent)
 {
-// QString for the running command
-    commandStringHead = "./Yoti-PuzzleSolver ../Images/Puzzle-";
 
-// Qstring for testing without new photos
-    //commandStringHead = "./Yoti-PuzzleSolver ../../PuzzleSolverProject/Scans/puzzle";
+    QString home = QDir::homePath();
+// QString for the running command
+    commandStringHead = "Yoti-PuzzleSolver " + home + "/Yoti-AppPuzzle/Images/Puzzle-";
+    logMessage(commandStringHead);
 
 // Init of view objects
     widgetLayout = new QVBoxLayout;
@@ -46,7 +46,7 @@ void WaittingWidget::solverProcessStart(int id)
 
     QString commandString = commandStringHead + QString::number(idPuzzle) + "/";
     std::string command = commandString.toStdString();
-
+    logMessage(commandString);
 
     solverProcess = QtConcurrent::run(execute, command);
     solverWatcher.setFuture(solverProcess);
@@ -59,7 +59,7 @@ void WaittingWidget::solverProcessEnd()
 {
     QString solverOutput = QString::fromStdString( solverProcess.result() );
 
-    qDebug() << solverOutput;
+    logMessage(solverOutput);
 
     solverOutput = solverOutput.simplified();
 
