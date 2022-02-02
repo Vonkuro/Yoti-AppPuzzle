@@ -4,10 +4,6 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
 TARGET = AppPuzzle
 TEMPLATE = subdirs
 
@@ -23,19 +19,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
-SOURCES += \
-        main.cpp \
-        mainWidget.cpp \
-    UnitsTests/tst_accesscamera.cpp \
-    main.cpp \
-    mainWidget.cpp
-
-HEADERS += \
-        mainWidget.h \
-    mainWidget.h
-
-FORMS += \
-        mainWidget.ui
+CONFIG += ordered
 
 SUBDIRS += \
-    UnitsTests/UnitsTests.pro
+    Widgets \
+    App
+
+App.depends = Widgets
+
