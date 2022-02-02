@@ -2,6 +2,7 @@ QT += core gui multimedia multimediawidgets sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+TARGET = Yoti-AppPuzzle
 TEMPLATE = app
 
 SOURCES += \
@@ -18,3 +19,5 @@ else:unix: LIBS += -L$$OUT_PWD/../Widgets/ -lWidgets
 
 INCLUDEPATH += $$PWD/../Widgets
 DEPENDPATH += $$PWD/../Widgets
+
+
