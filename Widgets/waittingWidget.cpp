@@ -6,7 +6,6 @@ WaittingWidget::WaittingWidget(QWidget *parent) : QWidget(parent)
     QString home = QDir::homePath();
 // QString for the running command
     commandStringHead = "Yoti-PuzzleSolver " + home + "/Yoti-AppPuzzle/Images/Puzzle-";
-    logMessage(commandStringHead);
 
 // Init of view objects
     widgetLayout = new QVBoxLayout;
