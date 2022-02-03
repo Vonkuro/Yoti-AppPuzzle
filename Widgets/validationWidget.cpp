@@ -152,14 +152,14 @@ void ValidationWidget::viewStyle()
     imageLabel->setScaledContents(true);
 
     titleLabel->setProperty("cssClass","title");
-    titleLabel->setText("L'Image est-elle\nValide ?");
+    titleLabel->setText("L'Image est-\nelle Valide ?");
     titleLabel->setStyleSheet("text-align: center");
     widgetLayout->setAlignment(titleLabel,Qt::AlignHCenter);
 
     validButton->setText("Valider");
     validButton->setStyleSheet(greenButtonFontStyle +
                                " " + greenButtonBackgroundStyle +
-                               "height: 50px;");
+                               "height: 50px; width: 110px");
     widgetLayout->setAlignment(validButton,Qt::AlignHCenter);
 
 

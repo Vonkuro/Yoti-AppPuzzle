@@ -291,10 +291,10 @@ void MasterWidget::viewStyle()
     masterStackedWidget->setMaximumSize(applicationSize);
     masterStackedWidget->setMinimumSize(applicationSize);
 // Adding the font of Yoti to the Application
-    QFontDatabase::addApplicationFont(":/viewRessource/Montserrat-SemiBold");
-    QFontDatabase::addApplicationFont(":/viewRessource/Montserrat");
-    QFontDatabase::addApplicationFont(":/viewRessource/Poppins-Medium");
-    QFontDatabase::addApplicationFont(":/viewRessource/Poppins-Bold");
+    QFontDatabase::addApplicationFont(":/Montserrat-SemiBold");
+    QFontDatabase::addApplicationFont(":/Montserrat");
+    QFontDatabase::addApplicationFont(":/Poppins-Medium");
+    QFontDatabase::addApplicationFont(":/Poppins-Bold");
 // Pages
     this->setObjectName("window");
 // Common StyleSheet
