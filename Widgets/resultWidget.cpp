@@ -58,7 +58,7 @@ void ResultWidget::display()
 {
     restartButton->setStyleSheet(greenButtonBackgroundStyle);
 
-    QString completedString = "Yoti App Puzzle n'est pas capable\nde résoudre ce Puzzle...";
+    QString completedString = "Yoti App Puzzle n'est pas capable\n        de résoudre ce Puzzle...";
     completedLabel->setText(completedString);
 
     QString piecesNumberString = "Yoti App Puzzle est désolé...";

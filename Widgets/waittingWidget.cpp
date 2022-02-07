@@ -137,7 +137,7 @@ void WaittingWidget::viewStyle()
     widgetLayout->setAlignment(logoLabel,Qt::AlignHCenter);
 
     titleLabel->setProperty("cssClass","title");
-    titleLabel->setText("Veuillez patienter pendant que Yoti\nApplication Puzzle travaille");
+    titleLabel->setText("Veuillez patienter pendant que Yoti\n       Application Puzzle travaille");
     titleLabel->setStyleSheet("text-align: center");
     widgetLayout->setAlignment(titleLabel,Qt::AlignHCenter);
 
