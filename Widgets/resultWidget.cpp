@@ -38,7 +38,7 @@ void ResultWidget::display(int piecesNumber, bool completed)
 {
     restartButton->setStyleSheet(greenButtonBackgroundStyle);
 
-    QString piecesNumberString = "Le Puzzle contient " + QString::number(piecesNumber) + " pièces dans ce Puzzle.";
+    QString piecesNumberString = "Le Puzzle contient " + QString::number(piecesNumber) + " pièces.";
     piecesNumberLabel->setText(piecesNumberString);
 
     QString completedString = "Le Puzzle est ";
